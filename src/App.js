@@ -1,9 +1,14 @@
 import React from 'react'
+import Row from './Row'
 
 const App = () => {
   return (
     <div className="App">
-      <h1></h1>
+      <Row title={"NETFLIX Original"} />
+      <Row title={"Trending Now"} />
+      <Row title={"Top Rated"} />
+      <Row title={"Action Movies"} />
+      <Row title={"Comedy Movies"} />
     </div>
   )
 }
