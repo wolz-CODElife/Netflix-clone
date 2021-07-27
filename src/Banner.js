@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from './axios'
 import requests from './requests'
-import Bg from './assets/bg.jpg'
 import './Banner.css'
 
 const Banner = () => {
-    const [movie, setMovie] = useState(
-        {
-            name: 'Dark',
-            backdrop_path: Bg,
-            overview: 'Dark is an horror adventure Genre movie. A boy finds out his parents are alcoholics and decides to escape home. His parents find out and assaults him.'
-        }
-    )
+    const [movie, setMovie] = useState({})
 
     useEffect(() => {
         const fetchData = async () => {
@@ -28,8 +21,7 @@ const Banner = () => {
         <header className="banner" style={
             {
                 backgroundSize: "cover",
-                // backgroundImage: url(`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`),
-                backgroundImage: `url(${movie?.backdrop_path})`,
+                backgroundImage: url(`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`),
                 backgroundPosition: "center center"
             }
         }>
